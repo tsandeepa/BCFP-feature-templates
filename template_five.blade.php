@@ -504,6 +504,11 @@ height: 4.3in;
 	clear:both;
 }
 
+.img-shadow-border{
+    border: 5px solid #222;
+    border-top: none;
+    border-left: none;
+}
 
       
       </style>
@@ -515,11 +520,11 @@ height: 4.3in;
 <div class="front-page-print">
             <!--Left Panel-->
            <img src="{{$bodyBackGroundImg}}" id="bodyBackGroundImg" />
-            <div class="main-wrap-front">
-                <div class="floorplan-img-wrap">
-                <img src="{{$defaultImg}}" />
-          <!--      <img src="{{ $data['front_page']->main_img_1->file_path_large  ?? ''}}" style="transform: translate({{ $data['front_page']->main_img_1_x}}px, {{ $data['front_page']->main_img_1_y}}px) scale( {{ $data['front_page']->main_img_1_scale}} );" />
--->
+            <div class="main-wrap-front" style="width: 8in">
+                <div class="floorplan-img-wrap img-shadow-border" style="overflow:hidden">
+                <!-- <img src="{{$defaultImg}}" /> -->
+               <img  src="{{ $data['front_page']->main_img_1->file_path_large  ?? ''}}" style="transform: translate({{ $data['front_page']->main_img_1_x}}px, {{ $data['front_page']->main_img_1_y}}px) scale( {{ $data['front_page']->main_img_1_scale}} );" />
+
 					<div style="position:absolute;bottom:3in;left:5.4in;">
 						<div style="font-size:0.1667in;color:#2F4F25;text-transform: uppercase;margin-bottom: 0.03in;font-weight:bold;">TOTALS</div>
 						<div style="font-size:0.1667in;color:#2F4F25;text-transform: uppercase;margin-bottom: 0.03in;">MAIN LEVEL:   {{ $data['back_page']->sqft_value  ?? ''}}  SQ.FT. </div>
@@ -611,10 +616,10 @@ height: 4.3in;
 
 <!-- Back -->
 
-<div class="back-page-print">
+<!-- <div class="back-page-print"> -->
       <img src="{{$bodyBackImg}}" id="bodyBackGroundImg" />
          <!-- Left Panel-->
-         <div class="main-wrap-back" style="padding-right:0.1687in;box-sizing:border-box;position:relative;">
+         <div class="main-wrap-back" style="padding-right:0.1687in; padding-left:0.5in; box-sizing:border-box;position:relative; ">
             
             <div class="description-footer-img">
             <img src="{{ $data['back_page']->img_1->file_path_large  ?? ''}}" />
@@ -653,15 +658,15 @@ height: 4.3in;
 				   
                </div>
             </div>
-			 <div class="main-img-back" style="border:1px solid #ff0000;position:absolute;bottom:0;">
+			 <div class="main-img-back" style="border:1px solid #ff0000;position:absolute;bottom:0.1in;">
 				 <div style="position:absolute;top:0.27777in;width:100%;text-align: center;font-size:0.1806in;color:#2F4F25;font-weight:600;">2 BEDROOM  |  2 BATHROOM  |  837 SQ FT   |   BUILT IN 2009</div>
                  <img src="{{ $data['back_page']->main_img_1->file_path_large  ?? ''}}" />
             </div>
          </div>
          <!--Left Panel End-->
          <!--Right Panel-->
-         <div class="main-wrap-back" style="padding-left:0.1687in;box-sizing:border-box;position:absolute;top:1in;right:1.3in;">
-            <div class="tile-img-wrap">
+         <div class="main-wrap-back" style="padding-left:0.1687in;box-sizing:border-box;position:absolute;top:1in;right:0.1in;">
+            <div class="tile-img-wrap" >
                <div class="main-tile-img">
                       <img src="{{ $data['back_page']->img_3->file_path_large  ?? ''}}" />
                   <img src="{{ $data['back_page']->img_4->file_path_large  ?? ''}}" style="margin-left: 0.24444in;" />
@@ -680,7 +685,7 @@ height: 4.3in;
             </div>
          </div>
          
-      </div>
+</div>
 
 <!-- Back End-->
 
