@@ -531,6 +531,8 @@ top: 0in;
 }
 
 
+
+
 /* Back page css End */
 
 
@@ -570,10 +572,11 @@ top: 0in;
             </table>
             </div>
             
-            <div class="floorplan-img-wrap">
-          	<!-- uncomment this image	
-					<img src="{{ $data['front_page']->main_img_1->file_path_large  ?? ''}}" style="transform: translate({{ $data['front_page']->main_img_1_x}}px, {{ $data['front_page']->main_img_1_y}}px) scale( {{ $data['front_page']->main_img_1_scale}} );" />
--->
+            <div class="floorplan-img-wrap" style="overflow:hidden">
+          	<!-- uncomment this image	 -->
+						
+					<img src="{{ $data['front_page']->main_img_1->file_path_large  ?? ''}}" style="width:100%; transform: translate({{ $data['front_page']->main_img_1_x}}px, {{ $data['front_page']->main_img_1_y}}px) scale( {{ $data['front_page']->main_img_1_scale}} );" />
+
 
 
 				
@@ -655,16 +658,36 @@ top: 0in;
 <!--Left Panel-->
   
   <div class="main-wrap-back" style="padding-right:0.1687in;box-sizing:border-box">
+
+
+	
 	  <div class="fnt-top-imgwrap">
 		  <div class="fnt-img-left">
 		  <div class="description-footer-img">
-		  <img src="{{ $data['back_page']->img_1->file_path_large  ?? ''}}"  />
+		  	<img src="{{ $data['back_page']->img_1->file_path_large  ?? ''}}"  />
 		  </div>
 		  <div class="description-footer-img" >
-		  <img src="{{ $data['back_page']->img_2->file_path_large  ?? ''}}"  />
+		  	<img src="{{ $data['back_page']->img_2->file_path_large  ?? ''}}"  />
 		  </div>
 		  </div>
 		  
+			<div style="position: absolute; top:0; color: #fff; width: 4.2in; left: 3.6in">
+				<div style="margin-bottom: 0.3in;  font-size:1.2rem">ON TOP OF IT ALL! BEAUTIFULL SUB-PENTHHOUSE IN THE WELL APPOINTED CENTERO BUILDING</div>
+				<div style="text-align: justify; margin-bottom: 0.2in">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque et reiciendis asperiores aliquid molestiae quisquam ad recusandae veniam illo vel.Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque et reiciendis asperiores aliquid molestiae quisquam ad recusandae veniam illo vel.Lorem ipsum dolor sit amet consectetiae quisquam riores aliquid molestiae quisquam ad recusandae veniam illo vel.Lorem ipsum dolor sit amet consectetiae quisquam riores aliquid molestiae quisquam ad recusandae veniam illo vel.Lorem ipsum dolor sit amet consectetiae quisquam ad recusandae veniam illo vel.
+				</div>
+
+				
+				<div style="text-align: justify;">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque et reiciendis asperiores aliquid molestiae quisquam ad recusandae veniam illo vel.Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque et reiciendis asperiores aliquid molestiae quisquam ad recusandae veniam illo vel.Lorem
+				</div>
+
+
+
+
+			</div>
+
+
 	  </div>
 	  <div class="main-img-back">
 	  <img src="{{ $data['back_page']->main_img_1->file_path_large  ?? ''}}" style="transform: translate({{ $data['back_page']->main_img_1_x}}px, {{ $data['back_page']->main_img_1_y}}px) scale( {{ $data['back_page']->main_img_1_scale}} );" />

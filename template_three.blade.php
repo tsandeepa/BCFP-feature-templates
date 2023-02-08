@@ -514,6 +514,13 @@
 			clear: both;
 		}
 
+		.img-shadow-border{
+    border: 5px solid #222;
+    border-top: none;
+    border-left: none;
+	}
+
+
 		/* Back Page CSS End */
 	</style>
 	<title>Untitled Document</title>
@@ -677,10 +684,10 @@
 		<div class="main-wrap-front" style="box-sizing:border-box;position:relative;margin-left:-0.1in;">
 			<div class="tile-img-wrap" style="position:relative;">
 				<div class="main-tile-img" style="position:absolute;top:0;left:-1in;">
-					<div class="tile-img">	<img src="{{ $data['back_page']->img_3->file_path  ?? ''}}"  /></div>
-					<div class="tile-img">	<img src="{{ $data['back_page']->img_4->file_path  ?? ''}}"  /></div>
-					<div class="tile-img">	<img src="{{ $data['back_page']->img_5->file_path  ?? ''}}"  /></div>
-					<div class="tile-img">	<img src="{{ $data['back_page']->img_6->file_path  ?? ''}}"  /></div>
+					<div class="tile-img img-shadow-border">	<img src="{{ $data['back_page']->img_3->file_path  ?? ''}}"  /></div>
+					<div class="tile-img img-shadow-border">	<img src="{{ $data['back_page']->img_4->file_path  ?? ''}}"  /></div>
+					<div class="tile-img img-shadow-border">	<img src="{{ $data['back_page']->img_5->file_path  ?? ''}}"  /></div>
+					<div class="tile-img img-shadow-border">	<img src="{{ $data['back_page']->img_6->file_path  ?? ''}}"  /></div>
 				</div>
 				<div class="main-details-wrap" style="position:absolute;top:0;right:0.1in;">
 					<div class="details-master-wrap" style="position:relative;">
