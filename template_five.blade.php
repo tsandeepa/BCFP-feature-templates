@@ -621,14 +621,14 @@ height: 4.3in;
          <!-- Left Panel-->
          <div class="main-wrap-back" style="padding-right:0.1687in; padding-left:0.5in; box-sizing:border-box;position:relative; ">
             
-            <div class="description-footer-img">
+            <div class="description-footer-img" style="position: relative; top:0.49in;">
             <img src="{{ $data['back_page']->img_1->file_path_large  ?? ''}}" />
         
             </div>
-            <div class="description-footer-img" style="margin-left:0.322in;position:absolute;top:0;right:0.3in;">
+            <div class="description-footer-img" style="margin-left:0.322in;position:absolute;top:0.49in;right:0.3in;">
             <img src="{{ $data['back_page']->img_2->file_path_large  ?? ''}}" />
             </div>
-            <div class="main-description">
+            <div class="main-description" style="top:0.4in; position: relative;">
                <div class="description">
                   <p>
                   {{ $data['back_page']->main_description  ?? ''}} 
@@ -658,7 +658,7 @@ height: 4.3in;
 				   
                </div>
             </div>
-			 <div class="main-img-back" style="border:1px solid #ff0000;position:absolute;bottom:0.1in;">
+			 <div class="main-img-back img-shadow-border" style="border:2px solid #fff;position:absolute;bottom:0.5in;">
 				 <div style="position:absolute;top:0.27777in;width:100%;text-align: center;font-size:0.1806in;color:#2F4F25;font-weight:600;">2 BEDROOM  |  2 BATHROOM  |  837 SQ FT   |   BUILT IN 2009</div>
                  <img src="{{ $data['back_page']->main_img_1->file_path_large  ?? ''}}" />
             </div>
