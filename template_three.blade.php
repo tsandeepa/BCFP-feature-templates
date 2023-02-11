@@ -196,7 +196,8 @@
 		.floorplan-img-wrap {
 			width: 7.5069in;
 			height: 8.5in;
-			padding-right: 0.4931in;
+			/* padding-right: 0.4931in; */
+			
 			box-sizing: border-box;
 		}
 
@@ -471,6 +472,7 @@
 			text-align: justify;
 			font-size: 0.125in;
 			color: #fff;
+			margin-bottom:0.1in;
 		}
 
 		.right-bottom-img-wrap {
@@ -492,13 +494,15 @@
 		.right-main-img {
 			width: 4.34in;
 			height: 7.0in;
-			margin-top: 0.2in;
+			margin-top: 2.6in;
 			overflow: hidden;
+			border-right: 4px solid #000;
+			border-bottom: 4px solid #000;
 		}
 
 		.right-main-img img {
-			width: 4.34in;
-			height: 7.0in;
+			/* width: 4.34in;
+			height: 7.0in; */
 		}
 
 		.breakPage {
@@ -548,12 +552,16 @@
 
 		<!--Left Panel-->
 		<div class="{{$backPagePdfConvert}}">
-			<img src="{{ $data['front_page']->main_img_1->file_path_large  ?? ''}}" style="transform: translate({{ $data['front_page']->main_img_1_x}}px, {{ $data['front_page']->main_img_1_y}}px) scale( {{ $data['front_page']->main_img_1_scale}} );" />
+			<!-- <img src="{{ $data['front_page']->main_img_1->file_path_large  ?? ''}}" style="opacity:0.4; transform: translate({{ $data['front_page']->main_img_1_x}}px, {{ $data['front_page']->main_img_1_y}}px) scale( {{ $data['front_page']->main_img_1_scale}} );" /> -->
 		</div>
 
 		<div class="main-wrap" style="position:relative;">
 			<div class="{{ $backPageBodyWrap}}">
-				<div class="floorplan-img-wrap" style=" padding-right: 0.4931in;box-sizing: border-box;"><img src="{{ $data['back_page']->main_img_2->file_path_large  ?? ''}}"></div>
+				<div class="floorplan-img-wrap" style=" box-sizing: border-box; overflow:hidden">
+				<!-- <img src="{{ $data['back_page']->main_img_2->file_path_large  ?? ''}}"> -->
+				<img src="{{ $data['front_page']->main_img_1->file_path_large  ?? ''}}" style="opacity:0.4; transform: translate({{ $data['front_page']->main_img_1_x}}px, {{ $data['front_page']->main_img_1_y}}px) scale( {{ $data['front_page']->main_img_1_scale}} );" />
+
+			</div>
 				<div style="width:69%;left:0;position:absolute;bottom:0.5in">
 					<div class="leftpanel-logo">
 
@@ -649,12 +657,11 @@
 
 		<div class="main-wrap-front" style="padding-right:0.1687in;box-sizing:border-box">
 			<div class="main-img-back">
-				<img src="{{ $data['back_page']->main_img_1->file_path  ?? ''}}"  />
+				<img src="{{ $data['back_page']->main_img_1->file_path  ?? ''}}"  style=" transform: translate({{ $data['back_page']->main_img_1_x}}px, {{ $data['back_page']->main_img_1_y}}px) scale( {{ $data['back_page']->main_img_1_scale}} );" />
+	  		<!-- <img src="{{ $data['back_page']->main_img_1->file_path_large  ?? ''}}" style=" transform: translate({{ $data['back_page']->main_img_1_x}}px, {{ $data['back_page']->main_img_1_y}}px) scale( {{ $data['back_page']->main_img_1_scale}} ); max-height:5.155in;" /> -->
 
-				<div class="image-zoom-btn-wrap">
-					<button type="button" class="template-zoom-btn"><i class="fa fa-plus" aria-hidden="true"></i></button>
-					<button type="button" class="template-zoom-btn"><i class="fa fa-minus" aria-hidden="true"></i></button>
-				</div>
+
+				
 			</div>
 			<div style="position:relative">
 				<div class="description-footer-img" style="position:absolute;top:0;left:0;">
@@ -759,12 +766,14 @@
 								</div>
 							</div>
 						</div>
+						
 						<div class="right-main-img" style="">
-						<img src="{{ $data['back_page']->main_img_2->file_path  ?? ''}}"  />
-							<div class="image-zoom-btn-wrap">
-								<button type="button" class="template-zoom-btn"><i class="fa fa-plus" aria-hidden="true"></i></button>
-								<button type="button" class="template-zoom-btn"><i class="fa fa-minus" aria-hidden="true"></i></button>
-							</div>
+					
+						<img src="{{ $data['back_page']->main_img_2->file_path  ?? ''}}"  style="transform: translate({{ $data['back_page']->main_img_2_x}}px, {{ $data['back_page']->main_img_2_y}}px) scale( {{ $data['back_page']->main_img_2_scale}} ); min-height: 7.0in;"/>
+						<!-- <img src="{{ $data['back_page']->main_img_2->file_path  ?? ''}}"  style="opacity: 0.4; transform: translate(0px, 0px) scale(3 );"/> -->
+
+
+							
 						</div>
 
 					</div>
