@@ -56,9 +56,9 @@ height: 0.8956in;
 margin-top: 0.25in;
 
 padding-top:1in;
-color:#2F4F25;
-background: #fff;
-opacity: 0.5;
+color:#b0d5a5;
+background: #181a1b;
+opacity: 0.7;
 	box-sizing: border-box;
 	padding-top:0.15in;
 
@@ -523,7 +523,7 @@ height: 4.3in;
             <div class="main-wrap-front" style="width: 8in">
                 <div class="floorplan-img-wrap img-shadow-border" style="overflow:hidden">
                 <!-- <img src="{{$defaultImg}}" /> -->
-               <img  src="{{ $data['front_page']->main_img_1->file_path_large  ?? ''}}" style="transform: translate({{ $data['front_page']->main_img_1_x}}px, {{ $data['front_page']->main_img_1_y}}px) scale( {{ $data['front_page']->main_img_1_scale}} );" />
+               <img  src="{{ $data['front_page']->main_img_1->file_path_large  ?? ''}}" style="transform: translate({{ $data['front_page']->main_img_1_x}}px, {{ $data['front_page']->main_img_1_y}}px) scale( {{ $data['front_page']->main_img_1_scale}} ); max-height:100%;" />
 
 					<div style="position:absolute;bottom:3in;left:5.4in;">
 						<div style="font-size:0.1667in;color:#2F4F25;text-transform: uppercase;margin-bottom: 0.03in;font-weight:bold;">TOTALS</div>
@@ -563,15 +563,16 @@ height: 4.3in;
 <div style="position:absolute;top:0.4861in;right:0.4861in;">
 				<div class="main-wrap" style="box-sizing: border-box; position: relative; width: 8.5in;">
                 <div style="position: relative; height: 5.16in; margin-left: 0.1666in;">
-                    <div class="main-image">
+                    <div class="main-image" style="overflow:hidden">
                  
                     <img src="{{ $data['front_page']->main_img_2->file_path_large  ?? ''}}" style="transform: translate({{ $data['front_page']->main_img_2_x}}px, {{ $data['front_page']->main_img_2_y}}px) scale( {{ $data['front_page']->main_img_2_scale}} );" />
 	
 
                         <div class="header-wrap">
                             <div class="header-banner-wrap">
-                                <div> {{$data['header'] ?? '' }},</div>
-                                <div>{{$data['sub_header'] ?? '' }}</div>
+                                <div> sdsdsd {{$data['front_page']-> header ?? '' }}</div>
+                                <div> sdsdsd {{$data['front_page']-> sub_header ?? '' }}</div>
+                                
                             </div>
                         </div>
                     </div>
@@ -660,7 +661,10 @@ height: 4.3in;
             </div>
 			 <div class="main-img-back img-shadow-border" style="border:2px solid #fff;position:absolute;bottom:0.5in;">
 				 <div style="position:absolute;top:0.27777in;width:100%;text-align: center;font-size:0.1806in;color:#2F4F25;font-weight:600;">2 BEDROOM  |  2 BATHROOM  |  837 SQ FT   |   BUILT IN 2009</div>
-                 <img src="{{ $data['back_page']->main_img_1->file_path_large  ?? ''}}" />
+                 
+                 <!-- <img src="{{ $data['back_page']->main_img_1->file_path_large  ?? ''}}" /> -->
+                 <img src="{{ $data['back_page']->main_img_1->file_path_large  ?? ''}}" style="transform: translate({{ $data['back_page']->main_img_1_x}}px, {{ $data['back_page']->main_img_1_y}}px) scale( {{ $data['back_page']->main_img_1_scale}} ); max-height:4.528in;" />
+                 <!-- aaaaaaaaaaaa -->
             </div>
          </div>
          <!--Left Panel End-->
