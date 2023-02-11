@@ -8,7 +8,7 @@
    $bodyBackGroundImg =  public_path("storage/images/ftemplate-1-"  . $theme . ".png");
    $bodyBackImg =public_path("storage/images/ftemplate-1-back-"  . $theme . ".jpg");
    $defaultImg =  public_path("storage/images/HQ/default.png");
- 
+
 
 
    ?>
@@ -22,7 +22,7 @@
       }
 
       body {
-         padding: 10px;
+         padding: 0;
       }
 
       @page {
@@ -720,7 +720,7 @@
 
    </div>
 
- 
+
 </body>
 
 </html>

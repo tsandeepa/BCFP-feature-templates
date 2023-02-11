@@ -575,7 +575,7 @@ top: 0in;
             <div class="floorplan-img-wrap" style="overflow:hidden">
           	<!-- uncomment this image	 -->
 						
-					<img src="{{ $data['front_page']->main_img_1->file_path_large  ?? ''}}" style="width:100%; transform: translate({{ $data['front_page']->main_img_1_x}}px, {{ $data['front_page']->main_img_1_y}}px) scale( {{ $data['front_page']->main_img_1_scale}} );" />
+					<img src="{{ $data['front_page']->main_img_1->file_path_large  ?? ''}}" style="transform: translate({{ $data['front_page']->main_img_1_x}}px, {{ $data['front_page']->main_img_1_y}}px) scale( {{ $data['front_page']->main_img_1_scale}} );" />
 
 
 
@@ -616,7 +616,7 @@ top: 0in;
                
             </div>
             <div style="position:relative;height:5.16in;">
-               <div class="main-image">
+               <div class="main-image" style="overflow:hidden">
 			   <img src="{{ $data['front_page']->main_img_2->file_path_large  ?? ''}}" style="transform: translate({{ $data['front_page']->main_img_2_x}}px, {{ $data['front_page']->main_img_2_y}}px) scale( {{ $data['front_page']->main_img_2_scale}} );" />
 
                   <div class="main-pg-main-img">
@@ -689,8 +689,9 @@ top: 0in;
 
 
 	  </div>
+		
 	  <div class="main-img-back">
-	  <img src="{{ $data['back_page']->main_img_1->file_path_large  ?? ''}}" style="transform: translate({{ $data['back_page']->main_img_1_x}}px, {{ $data['back_page']->main_img_1_y}}px) scale( {{ $data['back_page']->main_img_1_scale}} );" />
+	  <img src="{{ $data['back_page']->main_img_1->file_path_large  ?? ''}}" style=" transform: translate({{ $data['back_page']->main_img_1_x}}px, {{ $data['back_page']->main_img_1_y}}px) scale( {{ $data['back_page']->main_img_1_scale}} ); max-height:5.155in;" />
 
 	  </div>
   </div>
@@ -768,12 +769,20 @@ top: 0in;
 					  <div class="main-details-description">
 					  {{ $data['back_page']->view_value ?? '' }}
 					  </div>
-
+						
+						<!-- <h3>{{ $data['back_page']->main_img_2->file_path_large  ?? ''}}</h3> -->
 				  </div>
 				  </div> 
+					
 				  <div class="clearfix"></div>
 				  <div class="right-main-img">
-				  <img src="{{ $data['back_page']->main_img_2->file_path_large  ?? ''}}" style="transform: translate({{ $data['back_page']->main_img_2_x}}px, {{ $data['back_page']->main_img_2_y}}px) scale( {{ $data['back_page']->main_img_2_scale}} );" /> />
+					
+				  	<!-- <img src="{{ $data['back_page']->main_img_2->file_path_large  ?? ''}}" style=" opacity: 0.9;transform: translate({{ $data['back_page']->main_img_2_x}}px, {{ $data['back_page']->main_img_2_y}}px) scale( {{ $data['back_page']->main_img_2_scale}} );" />  -->
+				  	<img src="{{ $data['back_page']->main_img_2->file_path_large  ?? ''}}" style=" opacity: 0.9; position: relative; left: 22px; top: -25px; transform: translate({{ $data['back_page']->main_img_2_x}}px, {{ $data['back_page']->main_img_2_y}}px) scale({{ $data['back_page']->main_img_2_scale}});  max-height:4.4744in;" /> 
+				
+
+				 <!-- <img src="{{ $data['back_page']->main_img_2->file_path_large  ?? ''}}" style="position: relative; top:-150px; opacity: 0.5;transform: translate(7px, 6px) scale( 1 );" />  -->
+				 
 				  </div>
 				  
 			  </div>

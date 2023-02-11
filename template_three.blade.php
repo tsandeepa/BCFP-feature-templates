@@ -759,7 +759,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="right-main-img" style="top:2.28888in;position:absolute;">
+						<div class="right-main-img" style="">
 						<img src="{{ $data['back_page']->main_img_2->file_path  ?? ''}}"  />
 							<div class="image-zoom-btn-wrap">
 								<button type="button" class="template-zoom-btn"><i class="fa fa-plus" aria-hidden="true"></i></button>
