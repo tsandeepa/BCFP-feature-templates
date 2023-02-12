@@ -559,7 +559,7 @@
 			<div class="{{ $backPageBodyWrap}}">
 				<div class="floorplan-img-wrap" style=" box-sizing: border-box; overflow:hidden">
 				<!-- <img src="{{ $data['back_page']->main_img_2->file_path_large  ?? ''}}"> -->
-				<img src="{{ $data['front_page']->main_img_1->file_path_large  ?? ''}}" style=" width:initial; transform: translate({{ $data['front_page']->main_img_1_x}}px, {{ $data['front_page']->main_img_1_y}}px) scale( {{ $data['front_page']->main_img_1_scale}} );" />
+				<img src="{{ $data['front_page']->main_img_1->file_path_large  ?? ''}}" style=" transform: translate({{ $data['front_page']->main_img_1_x}}px, {{ $data['front_page']->main_img_1_y}}px) scale( {{ $data['front_page']->main_img_1_scale}} );" />
 
 			</div>
 				<div style="width:69%;left:0;position:absolute;bottom:0.5in">
@@ -602,9 +602,9 @@
 		<!--Right Panel-->
 
 		<div class="main-wrap" style="box-sizing:border-box;position:relative;width:8.5in;">
-			<div style="position:relative;height:5.8437in;background:#ccc; overflow:hidden">
+			<div style="position:relative;height:5.8437in;background:#ccc">
 				<div class="main-image" style="position:absolute;top:-3px;">
-					<img src="{{ $data['front_page']->main_img_2->file_path_large  ?? ''}}"  style="  transform: translate({{ $data['front_page']->main_img_2_x}}px, {{ $data['front_page']->main_img_2_y}}px) scale( {{ $data['front_page']->main_img_2_scale}} );" />
+					<img src="{{ $data['front_page']->main_img_2->file_path_large  ?? ''}}" />
 				</div>
 				<div style="position:absolute;top:-47px;z-index:4;">
 					<div style="position: relative;">
@@ -657,7 +657,7 @@
 
 		<div class="main-wrap-front" style="padding-right:0.1687in;box-sizing:border-box">
 			<div class="main-img-back">
-				<img src="{{ $data['back_page']->main_img_1->file_path_large  ?? ''}}"  style=" transform: translate({{ $data['back_page']->main_img_1_x}}px, {{ $data['back_page']->main_img_1_y}}px) scale( {{ $data['back_page']->main_img_1_scale}} );" />
+				<img src="{{ $data['back_page']->main_img_1->file_path  ?? ''}}"  style=" transform: translate({{ $data['back_page']->main_img_1_x}}px, {{ $data['back_page']->main_img_1_y}}px) scale( {{ $data['back_page']->main_img_1_scale}} );" />
 	  		<!-- <img src="{{ $data['back_page']->main_img_1->file_path_large  ?? ''}}" style=" transform: translate({{ $data['back_page']->main_img_1_x}}px, {{ $data['back_page']->main_img_1_y}}px) scale( {{ $data['back_page']->main_img_1_scale}} ); max-height:5.155in;" /> -->
 
 
@@ -769,7 +769,7 @@
 						
 						<div class="right-main-img" style="">
 					
-						<img src="{{ $data['back_page']->main_img_2->file_path_large  ?? ''}}"  style=" transform: translate({{ $data['back_page']->main_img_2_x}}px, {{ $data['back_page']->main_img_2_y}}px) scale( {{ $data['back_page']->main_img_2_scale}} ); max-height: 7.0in;"/>
+						<img src="{{ $data['back_page']->main_img_2->file_path  ?? ''}}"  style="transform: translate({{ $data['back_page']->main_img_2_x}}px, {{ $data['back_page']->main_img_2_y}}px) scale( {{ $data['back_page']->main_img_2_scale}} ); min-height: 7.0in;"/>
 						<!-- <img src="{{ $data['back_page']->main_img_2->file_path  ?? ''}}"  style="opacity: 0.4; transform: translate(0px, 0px) scale(3 );"/> -->
 
 
