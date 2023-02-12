@@ -570,8 +570,8 @@ height: 4.3in;
 
                         <div class="header-wrap">
                             <div class="header-banner-wrap">
-                                <div> sdsdsd {{$data['front_page']-> header ?? '' }}</div>
-                                <div> sdsdsd {{$data['front_page']-> sub_header ?? '' }}</div>
+                                <div>  {{$data['front_page']-> header ?? '' }}</div>
+                                <div>  {{$data['front_page']-> sub_header ?? '' }}</div>
                                 
                             </div>
                         </div>
@@ -600,9 +600,10 @@ height: 4.3in;
                 </div>
                 <div class="bottom-price">
                   <div style="margin-top:0.1in;">
-                  {{$data['main_description_center'] ?? '' }}
+                  {{$data['front_page']->main_description_center ?? '' }}
                     </div>
-                    <div style="position:absolute;bottom:0.2555in;width:100%;text-align:center;">${{$data['amount'] ?? '' }}</div>
+                    <div style="width:100%;text-align:center;"> 
+                    {{$data['front_page']->amount ?? '' }}</div>
                 </div>
             </div>
 			</div>
