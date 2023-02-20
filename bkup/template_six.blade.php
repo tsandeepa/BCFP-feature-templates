@@ -626,7 +626,7 @@ font-size: 30px;
 			   <img src="{{ $data['front_page']->main_img_2->file_path_large  ?? ''}}" style=" transform: translate({{ $data['front_page']->main_img_2_x}}px, {{ $data['front_page']->main_img_2_y}}px) scale( {{ $data['front_page']->main_img_2_scale}} );" />
 
                   <div class="main-pg-main-img">
-				  {{$data['front_page']->description_header ?? '' }}  ${{$data['front_page']->amount ?? '' }}
+				  {{$data['front_page']->description_header ?? '' }}
                   </div>
                </div>
                <div style="position:absolute;top:-47px;z-index:4;left: 2.6in;">

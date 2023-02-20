@@ -5,8 +5,8 @@
 	<meta charset="utf-8">
 	<?php
 	$theme = $data['theme'];
-	$bodyBackGroundImg =  public_path("storage/images/ftemplate-3-"  . $theme . ".jpg");
-	$bodyBackImg =  public_path("storage/images/ftemplate-3-back-"  . $theme . ".jpg");
+	$bodyBackGroundImg =  public_path("storage/images/Ftemplate-3-"  . $theme . ".jpg");
+	$bodyBackImg =  public_path("storage/images/Ftemplate-3-back-"  . $theme . ".jpg");
 	$defaultImg =  public_path("storage/images/Template2_BCFloorplans-1_03.jpg");
 	$banner =  public_path("storage/images/ftemplate-3-banner.png");
 
@@ -146,7 +146,7 @@
 			width: 100%;
 			height: 1.66in;
 			position: relative;
-			top: 3.05in;
+			top: 3.199in;
 		}
 
 		.tile-images img {
@@ -496,13 +496,13 @@
 			height: 7.0in;
 			margin-top: 2.6in;
 			overflow: hidden;
-			/* border-right: 4px solid #000;
-			border-bottom: 4px solid #000; */
+			border-right: 4px solid #000;
+			border-bottom: 4px solid #000;
 		}
 
 		.right-main-img img {
-			/* width: 4.34in; */
-			/* height: 1in; */
+			/* width: 4.34in;
+			height: 7.0in; */
 			width: 100%;
 		}
 
@@ -563,14 +563,14 @@
 				<img src="{{ $data['front_page']->main_img_1->file_path_large  ?? ''}}" style="  transform: translate({{ $data['front_page']->main_img_1_x}}px, {{ $data['front_page']->main_img_1_y}}px) scale( {{ $data['front_page']->main_img_1_scale}} );" />
 
 			</div>
-				<div style="width:69%;left:0;position:absolute;bottom:0.35in">
+				<div style="width:69%;left:0;position:absolute;bottom:0.5in">
 					<div class="leftpanel-logo">
 
 					</div>
-					<div class="footer-name" >
+					<div class="footer-name">
 						<span>{{$data['front_page']->contact_value ?? '' }}</span>
 					</div>
-					<div class="footer-name" style="margin-top:0;"><span>{{$data['front_page']->company_value ?? '' }} </span></div>
+					<div class="footer-name" style="margin-top:0;"><span>MACDONALD REALTY</span></div>
 					<div class="contact-details">
 						<span class="phone-lbl">{{$data['front_page']->phone_title ?? '' }}</span>&nbsp;
 						<span class="phone-numb">{{$data['front_page']->phone_value ?? '' }}</span>&nbsp;&nbsp;
@@ -594,7 +594,7 @@
 					<div class="clearfix"></div>
 				</div>
 				<div class="clearfix"></div>
-				<div class="footer-mark" style="position:absolute;bottom:0.1in;">DESIGNED AND PRINTED BY BC FLOOR PLANS</div>
+				<div class="footer-mark" style="position:absolute;bottom:0.2in;">DESIGNED AND PRINTED BY BC FLOOR PLANS</div>
 			</div>
 		</div>
 
@@ -603,7 +603,7 @@
 		<!--Right Panel-->
 
 		<div class="main-wrap" style="box-sizing:border-box;position:relative;width:8.5in;">
-			<div style="position:relative;height:5.8437in;">
+			<div style="position:relative;height:5.8437in;background:#ccc; ">
 				<div class="main-image" style="position:absolute;top:-3px;overflow:hidden">
 					<img src="{{ $data['front_page']->main_img_2->file_path_large  ?? ''}}"  style="  transform: translate({{ $data['front_page']->main_img_2_x}}px, {{ $data['front_page']->main_img_2_y}}px) scale( {{ $data['front_page']->main_img_2_scale}} );" />
 				</div>
@@ -652,7 +652,7 @@
 
 		<img src="{{ ($bodyBackImg) }}" id="bodyBackGroundImg" />
 
-		<h1 style="position:absolute;bottom:20px;width:100%;font-size:0.3in; text-align:left">{{ $data['back_page']->description_header  ?? ''}}</h1>
+		<h1 style="position:absolute;bottom:0;width:100%;font-size:0.3in;">{{ $data['back_page']->description_header  ?? ''}}</h1>
 
 		<!--Left Panel-->
 
@@ -673,10 +673,11 @@
 				</div>
 			</div>
 			<div class="clearfix"></div>
-			<div class="main-description" style="position:absolute;bottom:0.9in;">
+			<div class="main-description" style="position:absolute;bottom:0.2in;">
 				<div class="description tmp-three-desc">
 					<p style="height: 1.1777in; max-width: 7.7in; text-align: justify;">
-					{{ $data['back_page']->main_description  ?? ''}}
+						On top of it all! Beautiful sub-penthouse in the well appointed CENTRO building. This centrally home boasts incredible, totally unobstructed VIEWS overlooking Brighouse Park & to the South and South Westproviding unhindered privacy. The perfect floorplan with open concept living and cross unit bedrooms. Dark laminate flooring, S/S amenities including exercise room, sauna, roof top courtyard and outdoor kids playground. With parking, and storage locker and
+						balance of the the 5-10 warranty, this home provides nothing but exceptional value. Call today to set up your viewing.
 					</p>
 				</div>
 				<div class="clearfix"></div>
