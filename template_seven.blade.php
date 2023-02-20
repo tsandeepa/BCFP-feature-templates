@@ -394,16 +394,16 @@ p {
          <!-- <img src="{{ $data['front_page']->main_img_1->file_path_large  ?? ''}}" style="transform: translate(27px, -2px) scale(1.6);" /> -->
 
          </div>
-         <div style="position:absolute;width:100%;bottom:1.2in;left:3.5in;">
+         <div style="position:absolute;width:100%;bottom:0.6in;left:1.5in;">
             <div style="font-size:0.1667in;color:#231F20;text-transform: uppercase;margin-bottom: 0.03in;width:2in;box-sizing:border-box;padding-left:1.5in"></div>
             <div style="font-size:0.1667in;color:#231F20;text-transform: uppercase;margin-bottom: 0.03in;width:2in;box-sizing:border-box;padding-left:1.5in"> </div>
             <div style="font-size:0.1667in;color:#231F20;text-transform: uppercase;margin-bottom: 0.03in;width:2in;box-sizing:border-box;padding-left:1.5in"> </div>
             <div style="font-size: 0.08in;color: #231F20;width: 3.9in;">
-               All information deemed reliable but not guaranteed and should be independently verified. All properties are subject to prior sale, change or withdrawal. Neither listing broker(s) nor BC Floor Plans shall be responsible for any typographical errors, misinformation, misprints and shall be held totally harmless
+               <!-- All information deemed reliable but not guaranteed and should be independently verified. All properties are subject to prior sale, change or withdrawal. Neither listing broker(s) nor BC Floor Plans shall be responsible for any typographical errors, misinformation, misprints and shall be held totally harmless -->
             </div>
          </div>
-         <div style="width:100%;position:absolute;width:7.5in;box-sizing: border-box;padding:0 0.1306in;height: 2.04in;bottom:-0.2in;">
-            <div style="position:relative; bottom: 40px">
+         <div style="width:100%;position:absolute;width:7.5in;box-sizing: border-box;padding:0 0.1306in;height: 2.04in;bottom:0.13in;">
+            <div style="position:relative; bottom: 30px">
                <div class="leftpanel-logo"> <img src="{{ $data['company_logo'] ?? '' }}" /> </div>
                <div style="position: absolute;left:1in;top:0;left:1.8in;">
                   <div class="footer-name" style="text-transform:uppercase;"> <span>{{$data['front_page']->contact_value ?? '' }}</span> </div>
@@ -411,8 +411,8 @@ p {
                   <div class="contact-details"> <span class="phone-lbl">{{ $data['front_page']->phone_title?? '' }}</span>&nbsp; <span class="phone-numb">{{ $data['front_page']->phone_value?? '' }}</span>&nbsp;&nbsp; </div>
                   <div class="contact-details"> <span class="phone-lbl">{{ $data['front_page']->email_title?? '' }}</span> <span class="phone-numb">{{ $data['front_page']->email_value?? '' }}</span> </div>
                </div>
-               <div class="fsheets-copyright" style="margin-top:0.1in;"> All information deemed reliable but not guaranteed and should be independently verified. All properties are subject to prior sale, change or withdrawal. 
-                  Neither listing broker(s) nor BC Floor Plans shall be responsible for any typographical errors, misinformation, misprints and shall be held totally harmless 
+               <div class="fsheets-copyright" style=""> All information deemed reliable but not guaranteed and should be independently verified. All properties are subject to prior sale, change or withdrawal.  <br>
+               Neither listing broker(s) nor BC Floor Plans shall be responsible for any typographical errors, misinformation, misprints and shall be held totally harmless. 
                </div>
             </div>
          </div>
@@ -439,11 +439,11 @@ p {
                   </div>
                </div>
                <div class="tile-images"> 
-                  <img src="{{ $data['front_page']->img_1->file_path_large  ?? ''}}" style="margin-top:0.05in;margin-bottom:0.05in;" /> 
-                  <img src="{{ $data['front_page']->img_2->file_path_large  ?? ''}}" style="margin-top:0.05in;margin-bottom:0.05in;" /> 
-                  <img src="{{ $data['front_page']->img_3->file_path_large  ?? ''}}" style="margin-top:0.05in;margin-bottom:0.05in;" /> 
+                  <img src="{{ $data['front_page']->img_1->file_path_large  ?? ''}}" style="margin-top:0.05in;margin-bottom:0.09in;" /> 
+                  <img src="{{ $data['front_page']->img_2->file_path_large  ?? ''}}" style="margin-top:0.05in;margin-bottom:0.09in;" /> 
+                  <img src="{{ $data['front_page']->img_3->file_path_large  ?? ''}}" style="margin-top:0.05in;margin-bottom:0.09in;" /> 
                </div>
-               <div style="color:#231F20;font-size:0.2083in;text-align:center;margin-top:-0.1in"> {{$data['front_page']->description_header ?? '' }}</div>
+               <div style="color:#231F20;font-size:0.2083in;text-align:left;margin-top:-0.3in"> {{$data['front_page']->description_header ?? '' }}</div>
             </div>
          <!--Right Panel End--> 
 </div>
@@ -529,7 +529,7 @@ p {
                            </div>
                         </div>
                      </div>
-                  <div class="right-main-img"> <img  src="{{ $data['back_page']->img_7->file_path_large  ?? ''}}" /> <img src="{{ $data['back_page']->img_8->file_path_large  ?? ''}}"/> </div>
+                  <div class="right-main-img" style="position: relative; bottom:40px"> <img  src="{{ $data['back_page']->img_7->file_path_large  ?? ''}}" /> <img src="{{ $data['back_page']->img_8->file_path_large  ?? ''}}"/> </div>
 
                   </div>
                   <!-- <div class="clearfix"></div> -->
