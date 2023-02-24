@@ -511,7 +511,7 @@
          <!--Left Panel-->
          <div class="main-wrap-front" style="padding-right:0.1687in;box-sizing:border-box">
             <div class="main-img-back">
-               <div style="font-size:0.1944in;width:100%;top:0.2in;left:0;text-align:center;position:absolute;color:#fff;">
+               <div style="font-size:0.1944in;width:60%;top:0.2in;left:1in;text-align:center;position:absolute;color:#fff;">
                {{ $data['back_page']->main_description_center  ?? ''}}
                </div>
                
@@ -548,10 +548,10 @@
                      <div class="tile-img" style="position: absolute;top: 0;right: 0.27in;"><img src="{{ $data['back_page']->img_8->file_path  ?? ''}}"  /></div>
                   </div>
                </div>
-               <div class="main-details-wrap">
+               <div class="main-details-wrap" style="position: relative; top: 37px; ">
                   <div class="details-master-wrap">
                      <div class="right-main-img">
-                     <img src="{{ $data['back_page']->main_img_2->file_path_large  ?? ''}}"  style=" transform: translate({{ $data['back_page']->main_img_2_x}}px, {{ $data['back_page']->main_img_2_y}}px) scale( {{ $data['back_page']->main_img_2_scale}} ); "/>
+                     <img src="{{ $data['back_page']->main_img_2->file_path_large  ?? ''}}"  style="transform: translate({{ $data['back_page']->main_img_2_x}}px, {{ $data['back_page']->main_img_2_y}}px) scale( {{ $data['back_page']->main_img_2_scale}} ); "/>
 						
                      </div>
                   </div>

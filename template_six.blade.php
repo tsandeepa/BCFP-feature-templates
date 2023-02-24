@@ -98,8 +98,7 @@ page-break-after: always;
 }
 
 .main-image img{
-	width:8.4984in;
-    height:5.8437in;
+	width: 100%;
 }
 
 .tile-images{
@@ -158,6 +157,11 @@ page-break-after: always;
 	background:#ccc;
 	margin-left: 0.35in;
 	position:relative;
+	top: 35px;
+}
+
+.floorplan-img-wrap img{
+	width:100%;
 }
 
 .leftpanel-logo{
@@ -469,6 +473,11 @@ font-size: 30px;
 	overflow:hidden;
 }
 
+.right-main-img img{
+	width: 100%;
+}
+
+
 .tile-images img{
 	width: 100%;
 }
@@ -581,7 +590,7 @@ font-size: 30px;
             <div class="floorplan-img-wrap" style="overflow:hidden">
           	<!-- uncomment this image	 -->
 						
-					<img src="{{ $data['front_page']->main_img_1->file_path_large  ?? ''}}" style=" transform: translate({{ $data['front_page']->main_img_1_x}}px, {{ $data['front_page']->main_img_1_y}}px) scale( {{ $data['front_page']->main_img_1_scale}} ); max-height:8.0789in;" />
+					<img src="{{ $data['front_page']->main_img_1->file_path_large  ?? ''}}" style=" transform: translate({{ $data['front_page']->main_img_1_x}}px, {{ $data['front_page']->main_img_1_y}}px) scale( {{ $data['front_page']->main_img_1_scale}} );" />
 
 
 
@@ -596,13 +605,13 @@ font-size: 30px;
                     All information deemed reliable but not guaranteed and should be independently verified. All properties are subject to prior sale, change or withdrawal. Neither listing broker(s) nor BC Floor Plans shall be responsible for any typographical errors, misinformation, misprints and shall be held totally harmless
                 </div>
             </div>
-            <div style="width:69%;margin-top:0.17777in;">
+            <div style="width:69%;margin-top:0.17777in; position: relative; top: 40px">
                <div class="fsheets-copyright" style="margin-top:0;">
                   All information deemed reliable but not guaranteed and should be independently verified. All properties are subject to prior sale, change or withdrawal. 
                   Neither listing broker(s) nor BC Floor Plans shall be responsible for any typographical errors, misinformation, misprints and shall be held totally harmless
                </div>
             </div>
-            <div class="footer-mark">DESIGNED AND PRINTED BY BC FLOOR PLANS</div>
+            <div class="footer-mark" style="position: relative; top: 40px">DESIGNED AND PRINTED BY BC FLOOR PLANS</div>
          </div>
 
          <!--Left Panel End--> 
@@ -791,7 +800,7 @@ font-size: 30px;
 				  </div> 
 					
 				  <div class="clearfix"></div>
-				  <div class="right-main-img" style="transform: scale(1.08); position: relative; top:0; left:15px">
+				  <div class="right-main-img" style="transform: scale(1.08); position: relative; top:-10px; left:15px">
 					
 				  	<img src="{{ $data['back_page']->main_img_2->file_path_large  ?? ''}}" style="transform: translate({{ $data['back_page']->main_img_2_x}}px, {{ $data['back_page']->main_img_2_y}}px) scale( {{ $data['back_page']->main_img_2_scale}} );" /> 
 				  	<!-- <img src="{{ $data['back_page']->main_img_2->file_path_large  ?? ''}}" style=" position: relative; left: 0; top: -25px; transform: translate({{ $data['back_page']->main_img_2_x}}px, {{ $data['back_page']->main_img_2_y}}px) scale({{ $data['back_page']->main_img_2_scale}});  max-height:4.4744in;" />  -->

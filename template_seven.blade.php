@@ -76,11 +76,11 @@
          height: 1.3669in;
          bottom: 21px;
          text-align: center;
-         background: #ccc;
          }
          .header-banner-logo img {
-         width: 1.7338in !important;
-         height: 0.9467in !important;
+         width: auto !important;
+         height: 1in !important;
+         border: 1px solid #000;
          }
          .main-image {
          width: 6.8845in;
@@ -148,12 +148,13 @@
             width:100%;
          }
          .leftpanel-logo {
-         width: 1.6129in;
+         /* width: 1.6129in; */
          height: 0.9675in;
          margin-top: 0.5in;
+         margin-right: 10px;
          }
          .leftpanel-logo img {
-         width: 100%;
+         width: auto !important;
          height: 0.9675in;
          }
          .footer-name {
@@ -403,15 +404,19 @@ p {
             </div>
          </div>
          <div style="width:100%;position:absolute;width:7.5in;box-sizing: border-box;padding:0 0.1306in;height: 2.04in;bottom:0.13in;">
-            <div style="position:relative; bottom: 30px">
-               <div class="leftpanel-logo"> <img src="{{ $data['company_logo'] ?? '' }}" /> </div>
-               <div style="position: absolute;left:1in;top:0;left:1.8in;">
-                  <div class="footer-name" style="text-transform:uppercase;"> <span>{{$data['front_page']->contact_value ?? '' }}</span> </div>
-                  <div class="contact-details" style="margin-top:0;"><span>{{$data['front_page']->company_value ?? '' }}</span></div>
-                  <div class="contact-details"> <span class="phone-lbl">{{ $data['front_page']->phone_title?? '' }}</span>&nbsp; <span class="phone-numb">{{ $data['front_page']->phone_value?? '' }}</span>&nbsp;&nbsp; </div>
-                  <div class="contact-details"> <span class="phone-lbl">{{ $data['front_page']->email_title?? '' }}</span> <span class="phone-numb">{{ $data['front_page']->email_value?? '' }}</span> </div>
+            <div style="position:relative; bottom: -10px">
+               
+               <div style="left:1in;top:0;left:0; display:flex">
+                  <div class="leftpanel-logo" style="display: inline-block; margin-righr: 20px"> <img src="{{ $data['company_logo'] ?? '' }}" /> </div>
+                  <div  style="display: inline-block">
+                     <div class="footer-name" style="text-transform:uppercase;"> <span>{{$data['front_page']->contact_value ?? '' }}</span> </div>
+                     <div class="contact-details" style="margin-top:0;"><span>{{$data['front_page']->company_value ?? '' }}</span></div>
+                     <div class="contact-details"> <span class="phone-lbl">{{ $data['front_page']->phone_title?? '' }}</span>&nbsp; <span class="phone-numb">{{ $data['front_page']->phone_value?? '' }}</span>&nbsp;&nbsp; </div>
+                     <div class="contact-details"> <span class="phone-lbl">{{ $data['front_page']->email_title?? '' }}</span> <span class="phone-numb">{{ $data['front_page']->email_value?? '' }}</span> </div>
+                  </div>
+                 
                </div>
-               <div class="fsheets-copyright" style=""> All information deemed reliable but not guaranteed and should be independently verified. All properties are subject to prior sale, change or withdrawal.  <br>
+               <div class="fsheets-copyright" style="position: relative; bottom: 20px"> All information deemed reliable but not guaranteed and should be independently verified. All properties are subject to prior sale, change or withdrawal.  <br>
                Neither listing broker(s) nor BC Floor Plans shall be responsible for any typographical errors, misinformation, misprints and shall be held totally harmless. 
                </div>
             </div>
@@ -493,7 +498,7 @@ p {
                <div class="main-details-wrap">
                   <div class="details-master-wrap-top">
                      <div>{{$data['back_page']->sub_header ?? '' }}</div>
-                     <div>{{$data['back_page']->address_2 ?? '' }}</div>
+                     <!-- <div>{{$data['back_page']->address_2 ?? '' }}</div> -->
                    
                   </div>
                   <div class="details-master-wrap">
@@ -502,10 +507,7 @@ p {
                            <div class="main-details-header"> 	{{ $data['back_page']->law_restrictions_title ?? '' }}: </div>
                            <div class="main-details-description"> 	{{ $data['back_page']->law_restrictions_value ?? '' }}: </div>
                         </div>
-                        <div class="main-details">
-                           <div class="main-details-header"> MAINTENANCE FEES: </div>
-                           <div class="main-details-description"> $000.00 </div>
-                        </div>
+                        
                         <div class="main-details">
                            <div class="main-details-header"> {{ $data['back_page']->main_fees_title ?? '' }}: </div>
                            <div class="main-details-description">   {{ $data['back_page']->main_fees_value ?? '' }} 
@@ -524,12 +526,15 @@ p {
                         <div class="main-details">
                            <div class="main-details-header">   {{ $data['back_page']->amenities_title ?? '' }}: </div>
                            <div class="main-details-description"> {{ $data['back_page']->amenities_value ?? '' }} </div>
-                              <div class="main-details-header"> {{ $data['back_page']->view_title ?? '' }}: </div>
-                              <div class="main-details-description"> {{ $data['back_page']->view_value ?? '' }} </div>
-                           </div>
+                        </div>
+
+
+                        <div class="main-details">
+                           <div class="main-details-header"> {{ $data['back_page']->view_title ?? '' }}: </div>
+                           <div class="main-details-description"> {{ $data['back_page']->view_value ?? '' }} </div>
                         </div>
                      </div>
-                  <div class="right-main-img" style="position: relative; bottom:40px"> <img  src="{{ $data['back_page']->img_7->file_path_large  ?? ''}}" /> <img src="{{ $data['back_page']->img_8->file_path_large  ?? ''}}"/> </div>
+                  <div class="right-main-img" style="position: relative; bottom:-24px;"> <img  src="{{ $data['back_page']->img_7->file_path_large  ?? ''}}" /> <img src="{{ $data['back_page']->img_8->file_path_large  ?? ''}}"/> </div>
 
                   </div>
                   <!-- <div class="clearfix"></div> -->

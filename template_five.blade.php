@@ -54,11 +54,10 @@
 	width: 8in;
 height: 0.8956in;
 margin-top: 0.25in;
-
+color:#0006
 padding-top:1in;
-color:#b0d5a5;
-background: #181a1b;
-opacity: 0.7;
+    background: #e7dedeb8;
+opacity: 0.8;
 	box-sizing: border-box;
 	padding-top:0.15in;
 
@@ -175,6 +174,10 @@ opacity: 0.7;
 	background:#ccc;
 	position: relative;
 	
+}
+
+.floorplan-img-wrap img{
+    width:100%;
 }
 
 .leftpanel-logo{
@@ -499,6 +502,9 @@ height: 4.3in;
 	border:0.0278in solid #fff;
 }
 
+.main-img-back img{
+    width:100%;
+}
 
 .clearfix{
 	clear:both;
@@ -537,7 +543,7 @@ height: 4.3in;
 				</div>
                 <table  style="width:7.9555in;">
                     <tr>
-                        <td>
+                        <td style="width:5.8in">
                             <div class="footer-name"><span>{{$data['front_page']->contact_title ?? '' }}</span></div>
                             <div class="footer-name" style="margin-top: 0;"><span>{{$data['front_page']->contact_value ?? '' }}</span></div>
                             <div class="contact-details"><span class="phone-lbl">{{$data['front_page']->phone_title ?? '' }}</span>&nbsp; <span class="phone-numb">{{$data['front_page']->phone_value ?? '' }}</span>&nbsp;&nbsp;</div>
@@ -664,7 +670,7 @@ height: 4.3in;
 				 <div style="position:absolute;top:0.27777in;width:100%;text-align: center;font-size:0.1806in;color:#2F4F25;font-weight:600;">2 BEDROOM  |  2 BATHROOM  |  837 SQ FT   |   BUILT IN 2009</div>
                  
                  <!-- <img src="{{ $data['back_page']->main_img_1->file_path_large  ?? ''}}" /> -->
-                 <img src="{{ $data['back_page']->main_img_1->file_path_large  ?? ''}}" style="transform: translate({{ $data['back_page']->main_img_1_x}}px, {{ $data['back_page']->main_img_1_y}}px) scale( {{ $data['back_page']->main_img_1_scale}} ); max-height:4.528in;" />
+                 <img src="{{ $data['back_page']->main_img_1->file_path_large  ?? ''}}" style="transform: translate({{ $data['back_page']->main_img_1_x}}px, {{ $data['back_page']->main_img_1_y}}px) scale( {{ $data['back_page']->main_img_1_scale}} );" />
                  <!-- aaaaaaaaaaaa -->
             </div>
          </div>
