@@ -428,9 +428,9 @@
                   <div style="font-size:0.1667in;color:#029DB5;text-transform: uppercase;margin-bottom: 0.03in;"> </div>
                   <div style="font-size:0.1667in;color:#029DB5;text-transform: uppercase;margin-bottom: 0.03in;"> </div>
                </div>
-               <div style="font-size: 0.08in;color: #029DB5;width: 3.9in;position:absolute;bottom:0.4in;left:3in;">
+               <!-- <div style="font-size: 0.08in;color: #029DB5;width: 3.9in;position:absolute;bottom:0.4in;left:3in;">
                   All information deemed reliable but not guaranteed and should be independently verified. All properties are subject to prior sale, change or withdrawal. Neither listing broker(s) nor BC Floor Plans shall be responsible for any typographical errors, misinformation, misprints and shall be held totally harmless
-               </div>
+               </div> -->
             </div>
             <div>
                <table class="main-logo-tbl">

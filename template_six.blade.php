@@ -678,15 +678,15 @@ font-size: 30px;
 		  </div>
 		  
 			<div style="position: absolute; top:0; color: #fff; width: 4.2in; left: 3.6in">
-				<div style="margin-bottom: 0.3in;  font-size:1.2rem">ON TOP OF IT ALL! BEAUTIFULL SUB-PENTHHOUSE IN THE WELL APPOINTED CENTERO BUILDING</div>
+				<div style="margin-bottom: 0.3in;  font-size:1.2rem">{{ $data['back_page']->main_description_center  ?? ''}}</div>
 				<div style="text-align: justify; margin-bottom: 0.2in">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque et reiciendis asperiores aliquid molestiae quisquam ad recusandae veniam illo vel.Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque et reiciendis asperiores aliquid molestiae quisquam ad recusandae veniam illo vel.Lorem ipsum dolor sit amet consectetiae quisquam riores aliquid molestiae quisquam ad recusandae veniam illo vel.Lorem ipsum dolor sit amet consectetiae quisquam riores aliquid molestiae quisquam ad recusandae veniam illo vel.Lorem ipsum dolor sit amet consectetiae quisquam ad recusandae veniam illo vel.
-				</div>
+				{{ $data['back_page']->main_description  ?? ''}}	
+			</div>
 
 				
 				<div style="text-align: justify;">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque et reiciendis asperiores aliquid molestiae quisquam ad recusandae veniam illo vel.Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque et reiciendis asperiores aliquid molestiae quisquam ad recusandae veniam illo vel.Lorem
-				</div>
+				{{ $data['back_page']->main_description_2  ?? ''}}	
+			</div>
 
 
 

@@ -604,8 +604,8 @@
 
 		<div class="main-wrap" style="box-sizing:border-box;position:relative;width:8.5in;">
 			<div style="position:relative;height:5.8437in;">
-				<div class="main-image" style="position:absolute;top:-3px;overflow:hidden">
-					<img src="{{ $data['front_page']->main_img_2->file_path_large  ?? ''}}"  style="  transform: translate({{ $data['front_page']->main_img_2_x}}px, {{ $data['front_page']->main_img_2_y}}px) scale( {{ $data['front_page']->main_img_2_scale}} );" />
+				<div class="main-image" style="position:absolute;top:-3px; width:100%; overflow:hidden">
+					<img src="{{ $data['front_page']->main_img_2->file_path_large  ?? ''}}"  style=" transform: translate({{ $data['front_page']->main_img_2_x}}px, {{ $data['front_page']->main_img_2_y}}px) scale( {{ $data['front_page']->main_img_2_scale}} );" />
 				</div>
 				<div style="position:absolute;top:-47px;z-index:4;">
 					<div style="position: relative;">
@@ -652,7 +652,7 @@
 
 		<img src="{{ ($bodyBackImg) }}" id="bodyBackGroundImg" />
 
-		<h1 style="position:absolute;bottom:20px;width:100%;font-size:0.3in; text-align:left">{{ $data['back_page']->description_header  ?? ''}}</h1>
+		<h1 style="position:absolute;bottom:20px;width:100%;font-size:0.3in; ">{{ $data['back_page']->description_header  ?? ''}}</h1>
 
 		<!--Left Panel-->
 

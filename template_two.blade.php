@@ -109,9 +109,8 @@
 		}
 
 		.header-banner-logo img {
-			
-			width:1.7338in !important;
-	height:0.9467in !important;
+			height:1in !important;
+			width: auto !important;
 		}
 
 
@@ -195,8 +194,8 @@
 		}
 
 		.leftpanel-logo img {
-			width: 100%;
-			height: 0.9675in;
+			/* width: 100%; */
+			height: 1in;
 		}
 
 		.footer-name {

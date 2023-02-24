@@ -94,8 +94,8 @@
       }
 
       .header-banner-logo img {
-         width: 1.7478in;
          height: 1in;
+         object-fit: contain;
       }
 
       .header-banner-wrap {
@@ -178,11 +178,15 @@
          margin: auto;
          width: 1.7478in;
          height: 0.9675in;
+         text-align: center;
       }
 
       .leftpanel-logo img {
-         width: 100%;
-         height: 0.9675in;
+         margin: 0 auto;
+
+         height: 1in;
+         object-fit: contain !important;
+         /* opacity: 0.2; */
       }
 
       .footer-name {
