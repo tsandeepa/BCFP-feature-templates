@@ -25,8 +25,6 @@
          /* padding: 0; */
          /*applied 5px of padding for bleed test*/
          padding: 5px;
-         background:#00abea;
-
       }
 
       @page {
@@ -39,7 +37,7 @@
       .front-page-print {
          box-sizing: border-box;
          background-repeat: no-repeat;
-         padding: 0.4931in 0.4931in 0in 0.65in;
+         padding: 0.4931in 0.4931in 0in 0.4931in;
          width: 17in;
          position: relative;
          /* height:5in; */
@@ -52,7 +50,7 @@
          width: 17.5in;
          height: 11.5in;
          z-index: -999;
-         left:5px;
+         left:0;
          top:0;
       }
 
@@ -64,11 +62,11 @@
          right: 1in;
          top: 2.4in;
          top: 2in;
-         /* overflow: hidden; */
+         overflow: hidden;
       }
 
       .template-1-tile-img img {
-         width: 9in;
+         width: 8.5in;
 
       }
 
@@ -311,7 +309,6 @@
       .main-wrap-front {
          float: left;
          width: 8.0069in;
-         
       }
 
       .image-zoom-btn-wrap {
@@ -483,11 +480,6 @@
       .clearfix {
          clear: both;
       }
-
-      .back-page-prin{
-         padding: 0 0 0 .75in;
-      }
-
    </style>
    <title>Untitled Document</title>
 </head>
@@ -514,10 +506,7 @@
          
       
      <img src="{{ $data['front_page']->main_img_2->file_path_large  ??   $defaultImg  }}" style="transform: translate({{ $data['front_page']->main_img_2_x}}px, {{ $data['front_page']->main_img_2_y}}px) scale( {{ $data['front_page']->main_img_2_scale}} );" /> 
-         
-     
-         
-   </div>
+         </div>
       </div>
 
 
@@ -598,149 +587,145 @@
    <div class="back-page-print">
 
 <img src="{{ ($bodyBackImg) }}" id="bodyBackGroundImg" />
-      <div class="back-pg-wrap" style="  padding-left: 0.25in; padding-top: 0.25in">
+<!-- Left Panel -->
+      <div class="main-wrap-front" style="padding-right:0.1687in;box-sizing:border-box">
 
-      <!-- Left Panel -->
-            <div class="main-wrap-front" style="padding-right:0.1687in;box-sizing:border-box">
-
-               <div class="main-img-back">
-                  <img src="{{ $data['back_page']->main_img_1->file_path_large  ?? ''}}" style="transform: translate({{ $data['back_page']->main_img_1_x}}px, {{ $data['back_page']->main_img_1_y}}px) scale( {{ $data['back_page']->main_img_1_scale}} );" />
-               
-               </div>
-               <div class="main-description" style="position:relative;">
-                  <div class="description-image">
-                     <img src="{{ $data['back_page']->img_1->file_path_large  ?? ''}}" />
-                  </div>
-                  <div class="description" style="position:absolute;top:0;right:-5px;float:none;">
-                     <h1>{{ $data['back_page']->description_header  ?? ''}}</h1>
-                     <p>
-                        {{ $data['back_page']->main_description  ?? ''}}
-                     </p>
-                  </div>
-
-               </div>
-               <div>
-                  <div class="description-footer-img" style="float:left;">
-                     <img src="{{ $data['back_page']->img_2->file_path_large  ?? ''}}" />
-                  </div>
-                  <div class="description-footer-img" style="float:left;margin-left:4.1222in;">
-                     <img src="{{ $data['back_page']->img_3->file_path_large  ?? ''}}" />
-                  </div>
-
-
-               </div>
-
-
+         <div class="main-img-back">
+            <img src="{{ $data['back_page']->main_img_1->file_path_large  ?? ''}}" style="transform: translate({{ $data['back_page']->main_img_1_x}}px, {{ $data['back_page']->main_img_1_y}}px) scale( {{ $data['back_page']->main_img_1_scale}} );" />
+           
+         </div>
+         <div class="main-description" style="position:relative;">
+            <div class="description-image">
+               <img src="{{ $data['back_page']->img_1->file_path_large  ?? ''}}" />
+            </div>
+            <div class="description" style="position:absolute;top:0;right:-5px;float:none;">
+               <h1>{{ $data['back_page']->description_header  ?? ''}}</h1>
+               <p>
+                  {{ $data['back_page']->main_description  ?? ''}}
+               </p>
             </div>
 
-      <!-- Right Panel -->
-
-            <div class="main-wrap-front" style="box-sizing:border-box;">
-
-                  <div class="tile-img-wrap" style="height:5.2in; position: relative; left: -50px" >
-                     <div class="main-tile-img" style="position:absolute;left:0.43333in;">
-                        <div class="tile-img"><img src="{{ $data['back_page']->img_4->file_path_large  ?? ''}}" /></div>
-                        <div class="tile-img" style="margin-top: 0.18in;"><img src="{{ $data['back_page']->img_5->file_path_large  ?? ''}}" /></div>
-                     </div>
-                     <div class="main-details-wrap" style="position:absolute;left:4.2in;">
-                        <div class="details-master-wrap">
-                           <div class="main-details">
-                              <div class="main-details-header">
-                                 {{ $data['back_page']->law_restrictions_title  ?? ''}}:
-                              </div>
-                              <div class="main-details-description">
-                                 {{ $data['back_page']->law_restrictions_value  ?? ''}}
-                              </div>
-                           </div>
-                           <div class="main-details">
-                              <div class="main-details-header">
-                                 {{ $data['back_page']->main_fees_title  ?? ''}}:
-                              </div>
-                              <div class="main-details-description">
-                                 ${{ $data['back_page']->main_fees_value  ?? ''}}
-                              </div>
-                           </div>
-                           <div class="main-details">
-                              <div class="main-details-header">
-                                 {{ $data['back_page']->main_fees_include_title  ?? ''}}:
-                              </div>
-                              <div class="main-details-description">
-                                 {{ $data['back_page']->main_fees_include_value  ?? ''}}
-                              </div>
-                           </div>
-                           <div class="main-details">
-                              <div class="main-details-header">
-                                 {{ $data['back_page']->features_include_title  ?? ''}}:
-                              </div>
-                              <div class="main-details-description">
-                                 {{ $data['back_page']->features_include_value  ?? ''}}
-                              </div>
-                           </div>
-                           <div class="main-details">
-                              <div class="main-details-header">
-                                 {{ $data['back_page']->site_influences_title  ?? ''}}:
-                              </div>
-                              <div class="main-details-description">
-                                 {{ $data['back_page']->site_influences_value  ?? ''}}
-                              </div>
-                           </div>
-                           <div class="main-details">
-                              <div class="main-details-header">
-                                 {{ $data['back_page']->amenities_title  ?? ''}}:
-                              </div>
-                              <div class="main-details-description">
-                                 {{ $data['back_page']->amenities_value  ?? ''}}
-                              </div>
-                           </div>
-                           <div class="main-details">
-                              <div class="main-details-header">
-                                 {{ $data['back_page']->view_title  ?? ''}}:
-                              </div>
-                              <div class="main-details-description">
-                                 {{ $data['back_page']->view_value  ?? ''}}
-                              </div>
-
-                           </div>
-                        </div>
-                        <div class="main-details-tile-wrap">
-                           <div style="position: relative;">
-                              <div class="main-details-tile">
-                                 <img src="{{ $data['back_page']->img_6->file_path_large  ?? ''}}" />
-                              </div>
-                              <div class="main-details-tile" style="position:absolute;top:0;right:0;border:none"></div>
-                           </div>
-                           <div style="position: relative;margin-top:0.1;width:3.95in;margin-top:0.122in;">
-                              <div class="main-details-tile">
-                                 <img src="{{ $data['back_page']->img_7->file_path_large  ?? ''}}" />
-                              </div>
-                              <div class="main-details-tile" style="position:absolute;top:0;right:0;">
-                                 <img src="{{ $data['back_page']->img_8->file_path_large  ?? ''}}" />
-                              </div>
-                           </div>
-                           <div class="clearfix"></div>
-                        </div>
-
-                     </div>
-
-                  </div>
-                  
-                  <div class="right-bottom-img-wrap" style="margin-left:-0.06in;">
-                     <div class="right-bottom-img">
-                        <div class="right-bottom-description">
-                           {{ $data['back_page']->main_description_2  ?? ''}}
-                        </div>
-                        <!--  hard code zoom value-->
-                        <img src="{{ $data['back_page']->main_img_2->file_path_large  ?? ''}}" />
-                        <!--     <img src="{{ $data['back_page']->main_img_2->file_path_large  ?? ''}}" style="transform: translate({{ $data['back_page']->main_img_2_x ?? 0}}px, {{ $data['back_page']->main_img_2_y ?? 0}}px) scale( {{ $data['back_page']->main_img_2_scale?? 0}} );"  /> -->
+         </div>
+         <div>
+            <div class="description-footer-img" style="float:left;">
+               <img src="{{ $data['back_page']->img_2->file_path_large  ?? ''}}" />
+            </div>
+            <div class="description-footer-img" style="float:left;margin-left:4.1222in;">
+               <img src="{{ $data['back_page']->img_3->file_path_large  ?? ''}}" />
+            </div>
 
 
+         </div>
 
-                     </div>
-                  </div>
-            
-            </div> 
 
       </div>
+
+<!-- Right Panel -->
+
+      <div class="main-wrap-front" style=";box-sizing:border-box;">
+
+            <div class="tile-img-wrap" style="height:5.2in">
+               <div class="main-tile-img" style="position:absolute;left:0.43333in;">
+                  <div class="tile-img"><img src="{{ $data['back_page']->img_4->file_path_large  ?? ''}}" /></div>
+                  <div class="tile-img" style="margin-top: 0.18in;"><img src="{{ $data['back_page']->img_5->file_path_large  ?? ''}}" /></div>
+               </div>
+               <div class="main-details-wrap" style="position:absolute;left:4.2in;">
+                  <div class="details-master-wrap">
+                     <div class="main-details">
+                        <div class="main-details-header">
+                           {{ $data['back_page']->law_restrictions_title  ?? ''}}:
+                        </div>
+                        <div class="main-details-description">
+                           {{ $data['back_page']->law_restrictions_value  ?? ''}}
+                        </div>
+                     </div>
+                     <div class="main-details">
+                        <div class="main-details-header">
+                           {{ $data['back_page']->main_fees_title  ?? ''}}:
+                        </div>
+                        <div class="main-details-description">
+                           ${{ $data['back_page']->main_fees_value  ?? ''}}
+                        </div>
+                     </div>
+                     <div class="main-details">
+                        <div class="main-details-header">
+                           {{ $data['back_page']->main_fees_include_title  ?? ''}}:
+                        </div>
+                        <div class="main-details-description">
+                           {{ $data['back_page']->main_fees_include_value  ?? ''}}
+                        </div>
+                     </div>
+                     <div class="main-details">
+                        <div class="main-details-header">
+                           {{ $data['back_page']->features_include_title  ?? ''}}:
+                        </div>
+                        <div class="main-details-description">
+                           {{ $data['back_page']->features_include_value  ?? ''}}
+                        </div>
+                     </div>
+                     <div class="main-details">
+                        <div class="main-details-header">
+                           {{ $data['back_page']->site_influences_title  ?? ''}}:
+                        </div>
+                        <div class="main-details-description">
+                           {{ $data['back_page']->site_influences_value  ?? ''}}
+                        </div>
+                     </div>
+                     <div class="main-details">
+                        <div class="main-details-header">
+                           {{ $data['back_page']->amenities_title  ?? ''}}:
+                        </div>
+                        <div class="main-details-description">
+                           {{ $data['back_page']->amenities_value  ?? ''}}
+                        </div>
+                     </div>
+                     <div class="main-details">
+                        <div class="main-details-header">
+                           {{ $data['back_page']->view_title  ?? ''}}:
+                        </div>
+                        <div class="main-details-description">
+                           {{ $data['back_page']->view_value  ?? ''}}
+                        </div>
+
+                     </div>
+                  </div>
+                  <div class="main-details-tile-wrap">
+                     <div style="position: relative;">
+                        <div class="main-details-tile">
+                           <img src="{{ $data['back_page']->img_6->file_path_large  ?? ''}}" />
+                        </div>
+                        <div class="main-details-tile" style="position:absolute;top:0;right:0;border:none"></div>
+                     </div>
+                     <div style="position: relative;margin-top:0.1;width:3.95in;margin-top:0.122in;">
+                        <div class="main-details-tile">
+                           <img src="{{ $data['back_page']->img_7->file_path_large  ?? ''}}" />
+                        </div>
+                        <div class="main-details-tile" style="position:absolute;top:0;right:0;">
+                           <img src="{{ $data['back_page']->img_8->file_path_large  ?? ''}}" />
+                        </div>
+                     </div>
+                     <div class="clearfix"></div>
+                  </div>
+
+               </div>
+
+            </div>
+            
+            <div class="right-bottom-img-wrap" style="margin-left:-0.06in;">
+               <div class="right-bottom-img">
+                  <div class="right-bottom-description">
+                     {{ $data['back_page']->main_description_2  ?? ''}}
+                  </div>
+                  <!--  hard code zoom value-->
+                  <img src="{{ $data['back_page']->main_img_2->file_path_large  ?? ''}}" />
+                   <!--     <img src="{{ $data['back_page']->main_img_2->file_path_large  ?? ''}}" style="transform: translate({{ $data['back_page']->main_img_2_x ?? 0}}px, {{ $data['back_page']->main_img_2_y ?? 0}}px) scale( {{ $data['back_page']->main_img_2_scale?? 0}} );"  /> -->
+
+
+
+               </div>
+            </div>
+        
+      </div> 
 
    </div>
 
